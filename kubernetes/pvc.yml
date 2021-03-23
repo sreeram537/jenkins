@@ -14,7 +14,7 @@ metadata:
   name: jenkins-data
   namespace: devops-tools
 spec:
-  storageClassName: aws-efs
+  storageClassName: jenkins-data
   accessModes:
     - ReadWriteMany
   resources:

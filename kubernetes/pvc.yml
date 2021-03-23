@@ -20,3 +20,11 @@ spec:
   resources:
     requests:
       storage: 1Mi
+      
+      
+# How do we want it implemented      
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: jenkins-data
+provisioner: kubernetes.io/aws-efs

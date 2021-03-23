@@ -11,22 +11,22 @@ metadata:
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: jenkins-pvc
+  name: jenkins-data
   namespace: devops-tools
 spec:
-  storageClassName: jenkins-data
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
+  storageClassName: aws-efs  
   resources:
     requests:
-      storage: 2Gi
+      storage: 1Mi
       
 ---   
 ####How do we want it implemented      
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: jenkins-data
-provisioner: kubernetes.io/aws-ebs
-parameters:
-  type: gp2
+#apiVersion: storage.k8s.io/v1
+#kind: StorageClass
+#metadata:
+#  name: jenkins-data
+#provisioner: kubernetes.io/aws-ebs
+#parameters:
+#  type: gp2

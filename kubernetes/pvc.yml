@@ -30,3 +30,10 @@ spec:
 #provisioner: kubernetes.io/aws-ebs
 #parameters:
 #  type: gp2
+
+--- 
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata: 
+  name: efs-sc
+provisioner: efs.csi.aws.com

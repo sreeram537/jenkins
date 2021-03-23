@@ -14,7 +14,7 @@ metadata:
   name: jenkins-data
   namespace: devops-tools
 spec:
-  storageClassName: cloud-ssd
+  storageClassName: aws-efs
   accessModes:
     - ReadWriteOnce
   resources:

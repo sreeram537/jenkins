@@ -19,7 +19,7 @@ spec:
   storageClassName: efs-sc  
   resources:
     requests:
-      storage: 1Mi
+      storage: 5Gi
       
 ---   
 ####How do we want it implemented      

@@ -27,6 +27,6 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: jenkins-data
-provisioner: kubernetes.io/aws-ebs
+provisioner: kubernetes.io/aws-efs
 parameters:
   type: gp2

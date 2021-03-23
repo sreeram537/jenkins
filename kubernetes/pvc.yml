@@ -16,7 +16,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: aws-efs  
+  storageClassName: efs-sc  
   resources:
     requests:
       storage: 1Mi

@@ -1,9 +1,9 @@
 ---
 #### Starting with creation of the Jenkins NAMESPACE
-#apiVersion: v1
-#kind: Namespace
-#metadata:
-#  name: devops-tools
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: devops-tools
 
 ---
   
@@ -16,7 +16,7 @@ metadata:
 spec:
   storageClassName: aws-efs
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
-      storage: 2Gi
+      storage: 1Mi

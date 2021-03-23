@@ -11,7 +11,7 @@ metadata:
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: jenkins-data
+  name: jenkins-pvc
   namespace: devops-tools
 spec:
   storageClassName: jenkins-data

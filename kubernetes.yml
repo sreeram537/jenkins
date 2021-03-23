@@ -45,17 +45,17 @@ subjects:
 ---
   
 ##### Creating the volume claim
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: jenkins-data
-  namespace: devops-tools
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 2Gi
+#kind: PersistentVolumeClaim
+#apiVersion: v1
+#metadata:
+#  name: jenkins-data
+#  namespace: devops-tools
+#spec:
+#  accessModes:
+#    - ReadWriteOnce
+#  resources:
+#    requests:
+#      storage: 2Gi
   
 ---
   

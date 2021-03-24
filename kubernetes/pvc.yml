@@ -15,7 +15,7 @@ metadata:
   namespace: devops-tools
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   storageClassName: jenkins-data 
   resources:
     requests:

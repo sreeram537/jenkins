@@ -38,7 +38,7 @@ subjects:
    accessModes:
      - ReadWriteOnce
    capacity:
-     storage: 2Gi
+     storage: 5Gi
    hostPath:
      path: /data/jenkins-home/
 awsElasticBlockStore:  

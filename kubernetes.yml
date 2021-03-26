@@ -41,7 +41,9 @@ subjects:
      storage: 2Gi
    hostPath:
      path: /data/jenkins-home/
-  
+awsElasticBlockStore:  
+  volumeID: vol-0f00c29607751a106
+  fsType: gp2 
 ---
   
 ##### Creating the volume claim

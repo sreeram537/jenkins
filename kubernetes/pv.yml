@@ -38,9 +38,11 @@ metadata:
     type: amazonEBS
 spec:
   capacity:
-    storage: 1Gi
-accessModes:
-  - ReadWriteOnce
-awsElasticBlockStore:
-  volumeID: aws://us-east-2a/vol-0f00c29607751a106
-  fsType: ext4
+    storage: 5Gi
+  hostPath:
+     path: /data/jenkins-home/    
+  accessModes:
+      - ReadWriteOnce
+  awsElasticBlockStore:
+    volumeID: aws://us-east-2a/vol-0f00c29607751a106
+    fsType: ext4

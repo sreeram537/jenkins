@@ -8,20 +8,39 @@ metadata:
 ---
   
 # #### Creating the volume for data persistence
- apiVersion: v1
- kind: PersistentVolume
- metadata:
-   name: jenkins-pv
-   namespace: devops-tools
-   labels:
-    type: jenkins-pv
- spec:
-   accessModes:
-     - ReadWriteOnce
-   capacity:
-     storage: 5Gi
-   hostPath:
-     path: /data/jenkins-home/
-awsElasticBlockStore:  
+#  apiVersion: v1
+#  kind: PersistentVolume
+#  metadata:
+#    name: jenkins-pv
+#    namespace: devops-tools
+#    labels:
+#     type: jenkins-pv
+#  spec:
+#    accessModes:
+#      - ReadWriteOnce
+#    capacity:
+#      storage: 5Gi
+#    hostPath:
+#      path: /data/jenkins-home/
+# awsElasticBlockStore:  
+#   volumeID: aws://us-east-2a/vol-0f00c29607751a106
+#   fsType: xfs 
+
+---
+  
+# #### Creating the volume for data persistence
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: test2
+  namespace: devops-tools
+  labels:
+    type: amazonEBS
+spec:
+  capacity:
+    storage: 1Gi
+accessModes:
+  - ReadWriteOnce
+awsElasticBlockStore:
   volumeID: aws://us-east-2a/vol-0f00c29607751a106
-  fsType: xfs 
+  fsType: ext4

@@ -82,7 +82,7 @@ spec:
       volumes:
         - name: jenkins-home
           persistentVolumeClaim:
-            claimName: jenkins-pvc
+            claimName: task-pv-claimr
         - name: docker-sock 
           hostPath: 
             path: /var/run 

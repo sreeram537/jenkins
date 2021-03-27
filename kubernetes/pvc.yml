@@ -1,22 +1,22 @@
 ---
   
 ##### Creating the volume claim
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: jenkins-pvc
-  namespace: devops-tools
-  labels:
-       type: jenkins-pvc
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 5Gi
-     selector:
-      matchLabels:
-        type: jenkins-pv 
+# kind: PersistentVolumeClaim
+# apiVersion: v1
+# metadata:
+#   name: jenkins-pvc
+#   namespace: devops-tools
+#   labels:
+#        type: jenkins-pvc
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 5Gi
+#      selector:
+#       matchLabels:
+#         type: jenkins-pv 
 ---   
 ####How do we want it implemented      
 # apiVersion: storage.k8s.io/v1
@@ -33,3 +33,16 @@ spec:
 #metadata: 
 #  name: efs-sc
 #provisioner: efs.csi.aws.com
+
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: task-pv-claimr
+  namespace: devops-tools
+spec:
+  storageClassName: standard
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
